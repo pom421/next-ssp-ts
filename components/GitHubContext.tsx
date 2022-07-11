@@ -13,7 +13,7 @@ export const useGitHubContext = () => {
   const values = React.useContext(GitHubContext);
   if (!values) {
     throw new Error(
-      "useGitHubContext must be used within a GitHubContextProvider"
+      "useGitHubContext must be used within a GitHubContext Provider"
     );
   }
   return values;

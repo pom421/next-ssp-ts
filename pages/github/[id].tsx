@@ -16,10 +16,11 @@ import { fetcher } from "../../utils/fetcher";
 export const getServerSideProps = async (
   context: GetServerSidePropsContext<{ id: string }>
 ) => {
-  const id = context.params?.id || "pom421";
+  const id = context.params?.id;
 
   const res = context.res;
 
+  // Doesn't work? See docs: https://nextjs.org/docs/api-reference/next.js-api/getServerSideProps#context-object
   res.setHeader(
     "Cache-Control",
     "public, s-maxage=10, stale-while-revalidate=59"
